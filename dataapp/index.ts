@@ -11,9 +11,6 @@ import session from 'express-session'
 import bcrypt from 'bcryptjs'
 import express, { Request, Response, NextFunction } from 'express';
 
-
-
-
 const stateMapping: Record<string, string> = {
     "Alabama": "AL",
     "Kentucky": "KY",
@@ -224,7 +221,7 @@ const streetSuffixMapping: Record<string, string> = {
   }
 
 const app = express()
-const port = 3000
+const port = 443
 
 const hlrToken = ''
 const hlrSecret = ''
@@ -240,10 +237,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-
-
 const fs = require('fs')
-
 
 // const mapTemplate = fs.readFileSync('templates/pages/map.html', 'utf-8')
 const indexTemplate = fs.readFileSync('templates/pages/home.mustache', 'utf-8')
