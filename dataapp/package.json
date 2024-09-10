@@ -8,7 +8,7 @@
     "start": "pnpm pm2 start index.ts --interpreter ./node_modules/.bin/ts-node",
     "pages:build": "npx @cloudflare/next-on-pages",
     "build": "tsc",
-    "deploy": "npm run pages:build && wrangler pages deploy",
+    "deploy": "pnpm run pages:build && wrangler pages deploy",
     "dev": "ts-node index.ts"
   },
   "author": "",
