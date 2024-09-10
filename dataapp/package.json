@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pnpm pm2 start index.ts --interpreter ./node_modules/.bin/ts-node",
-    "build": "tsc",
+    "build": "pnpm tsc",
     "deploy": "wrangler pages deploy",
     "dev": "ts-node index.ts"
   },
